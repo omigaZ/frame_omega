@@ -4,6 +4,7 @@
  * User: edz
  * Date: 2017/9/14
  * Time: 19:05
+ * 路由类
  */
 namespace core\lib;
 class rote{

@@ -4,6 +4,7 @@
  * User: edz
  * Date: 2017/9/14
  * Time: 18:35
+ * 公共方法
  */
 function p($var){
     if(is_bool($var)){

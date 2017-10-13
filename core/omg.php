@@ -4,6 +4,7 @@
  * User: edz
  * Date: 2017/9/14
  * Time: 18:49
+ * 基类
  */
 namespace core;
 class omg{
@@ -11,9 +12,18 @@ class omg{
     public static $classMap = array();
 
     static public function run(){
-        p('OK');
         $rote = new \core\lib\rote();
-        p($rote);
+        $controllerClass = $rote->ctrl;
+        $action = $rote->action;
+        $controllerFile = APP.'/controller/'.$controllerClass.'Controller.php';
+        $cClass = '\\'.MODULE.'\controller\\'.$controllerClass.'Controller';
+        if(is_file($controllerFile)){
+            include $controllerFile;
+            $control = new $cClass();
+            $control->$action();
+        }else{
+            throw new \Exception('找不到控制器'.$controllerClass);
+        }
     }
 
     /**

@@ -8,7 +8,7 @@
 define('OMG',realpath('./'));
 define('CORE',OMG.'/core');
 define('APP',OMG.'/app');
-
+define('MODULE','app');
 define('DEBUG',true);
 
 if(DEBUG){
