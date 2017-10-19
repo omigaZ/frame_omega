@@ -10,9 +10,10 @@ namespace core;
 class omg{
 
     public static $classMap = array();
+    public $assign;
 
     static public function run(){
-        $rote = new \core\lib\rote();
+        $rote = new \core\lib\route();
         $controllerClass = $rote->ctrl;
         $action = $rote->action;
         $controllerFile = APP.'/controller/'.$controllerClass.'Controller.php';
@@ -45,5 +46,17 @@ class omg{
             }
         }
 
+    }
+
+    public function assign($name,$value){
+        $this->assign[$name] = $value;
+    }
+
+    public function display($file){
+        $file = APP."/view/".$file.".html";
+        if(is_file($file)){
+            extract($this->assign);
+            include $file;
+        }
     }
 }

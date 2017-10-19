@@ -7,7 +7,7 @@
  * 路由类
  */
 namespace core\lib;
-class rote{
+class route{
     public $ctrl;
     public $action;
     public function __construct()
@@ -40,7 +40,6 @@ class rote{
                }
                $i += 2;
            }
-           p($_GET);
         }else{
             $this->ctrl = 'index';
             $this->action = 'index';
