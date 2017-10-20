@@ -6,15 +6,14 @@
  * Time: 15:27
  */
 namespace core\lib;
+use core\lib\config;
 
 class model extends \PDO{
     public function __construct()
     {
-        $dsn = 'mysql:host=localhost;dbname=test';
-        $username = 'root';
-        $passwd = '';
+        $db_connect = config::get_all('db');
         try{
-            parent::__construct($dsn, $username, $passwd);
+            parent::__construct($db_connect['DSN'], $db_connect['USERNAME'], $db_connect['PASSWD']);
         }catch (\PDOException $e){
             p($e->getMessage());
         }

@@ -7,6 +7,7 @@
  * 路由类
  */
 namespace core\lib;
+use core\lib\config;
 class route{
     public $ctrl;
     public $action;
@@ -29,7 +30,7 @@ class route{
                $this->action = $pathAry[1];
                unset($pathAry[1]);
            }else{
-               $this->action = 'index';
+               $this->action = config::get('ACTION','route');
            }
            //解析参数
             $count = count($pathAry);
@@ -41,8 +42,8 @@ class route{
                $i += 2;
            }
         }else{
-            $this->ctrl = 'index';
-            $this->action = 'index';
+            $this->ctrl = config::get('CONTROLLER','route');
+            $this->action = config::get('ACTION','route');
         }
     }
 }
