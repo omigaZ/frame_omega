@@ -7,13 +7,18 @@
  * 基类
  */
 namespace core;
+use core\lib\log;
+use core\lib\route;
+
 class omg{
 
     public static $classMap = array();
     public $assign;
 
     static public function run(){
-        $rote = new \core\lib\route();
+        log::init();
+        log::log('简写测试','aappcc');
+        $rote = new route();
         $controllerClass = $rote->ctrl;
         $action = $rote->action;
         $controllerFile = APP.'/controller/'.$controllerClass.'Controller.php';
@@ -22,6 +27,7 @@ class omg{
             include $controllerFile;
             $control = new $cClass();
             $control->$action();
+            log::log('controller: '.$cClass.'---'.'action: '.$action);
         }else{
             throw new \Exception('找不到控制器'.$controllerClass);
         }

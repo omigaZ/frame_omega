@@ -11,7 +11,11 @@ define('APP',OMG.'/app');
 define('MODULE','app');
 define('DEBUG',true);
 
+include "vendor/autoload.php";
 if(DEBUG){
+    $whoops = new \Whoops\Run;
+    $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+    $whoops->register();
     ini_set('display_errors','on');
 }else{
     ini_set('display_errors','off');
