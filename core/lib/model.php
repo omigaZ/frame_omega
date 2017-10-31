@@ -8,15 +8,17 @@
 namespace core\lib;
 use core\lib\config;
 
-class model extends \PDO{
+class model extends \Medoo\Medoo{
+    protected $table;
     public function __construct()
     {
-        $db_connect = config::get_all('db');
-        try{
-            parent::__construct($db_connect['DSN'], $db_connect['USERNAME'], $db_connect['PASSWD']);
-        }catch (\PDOException $e){
-            p($e->getMessage());
-        }
-
+        $db_option = config::get_all('db');
+        parent::__construct($db_option);
     }
+
+    public function lists(){
+        $res = $this->select($this->table,'*');
+        return $res;
+    }
+
 }

@@ -11,10 +11,13 @@ define('APP',OMG.'/app');
 define('MODULE','app');
 define('DEBUG',true);
 
-include "vendor/autoload.php";
 if(DEBUG){
+    include "vendor/autoload.php";
     $whoops = new \Whoops\Run;
-    $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+    $errorTitle = 'OMG提醒:出错了';
+    $option = new \Whoops\Handler\PrettyPageHandler();
+    $option->setPageTitle($errorTitle);
+    $whoops->pushHandler($option);
     $whoops->register();
     ini_set('display_errors','on');
 }else{

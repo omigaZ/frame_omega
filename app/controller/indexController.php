@@ -6,19 +6,16 @@
  * Time: 14:22
  */
 namespace app\controller;
-use core\lib\model;
+use app\model\studentModel;
 use core\omg;
 
 class indexController extends omg {
 
     public function index(){
-        /*$sql = "SELECT * FROM `student`";
-        $res = $model->query($sql);
-        $data = $res->fetchAll();*/
-        $data = array(
-            1,2,3,4
-        );
-        $this->assign('data',$data);
-        $this->display('index');
+        $model = new studentModel();
+
+        $student_one = $model->getOne(1);
+
+        dump($student_one);
     }
 }
