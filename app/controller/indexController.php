@@ -14,8 +14,9 @@ class indexController extends omg {
     public function index(){
         $model = new studentModel();
 
-        $student_one = $model->getOne(1);
-
-        dump($student_one);
+        $data = $model->lists();
+        $data = "lalala";
+        $this->assign('data',$data);
+        $this->display('index');
     }
 }

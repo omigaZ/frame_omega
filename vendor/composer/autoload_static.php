@@ -16,6 +16,10 @@ class ComposerStaticInitcbdd4cccd09fe3af35b6de8ca89589b7
         array (
             'Whoops\\' => 7,
         ),
+        'T' => 
+        array (
+            'Twig\\' => 5,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
@@ -36,6 +40,10 @@ class ComposerStaticInitcbdd4cccd09fe3af35b6de8ca89589b7
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
         ),
+        'Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
@@ -54,11 +62,22 @@ class ComposerStaticInitcbdd4cccd09fe3af35b6de8ca89589b7
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitcbdd4cccd09fe3af35b6de8ca89589b7::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitcbdd4cccd09fe3af35b6de8ca89589b7::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitcbdd4cccd09fe3af35b6de8ca89589b7::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

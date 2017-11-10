@@ -21,4 +21,16 @@ class model extends \Medoo\Medoo{
         return $res;
     }
 
+    public function getOne($id){
+        return $this->get($this->table,'*',array('id'=>$id));
+    }
+
+    public function setOne($id,$data){
+        return $this->update($this->table,$data,array('id'=>$id))->rowCount();
+    }
+
+    public function delOne($id){
+        return $this->delete($this->table,array('id'=>$id))->rowCount();
+    }
+
 }

@@ -14,7 +14,7 @@ define('DEBUG',true);
 if(DEBUG){
     include "vendor/autoload.php";
     $whoops = new \Whoops\Run;
-    $errorTitle = 'OMG提醒:出错了';
+    $errorTitle = 'error';
     $option = new \Whoops\Handler\PrettyPageHandler();
     $option->setPageTitle($errorTitle);
     $whoops->pushHandler($option);

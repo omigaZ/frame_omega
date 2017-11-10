@@ -17,10 +17,4 @@ class studentModel extends model{
         $this->table = 'student';
     }
 
-    public function getOne($id){
-        return $this->get($this->table,'*',array(
-            'id'=>$id
-        ));
-    }
-
 }

@@ -61,8 +61,15 @@ class omg{
     public function display($file){
         $file = APP."/view/".$file.".html";
         if(is_file($file)){
-            extract($this->assign);
-            include $file;
+            //extract($this->assign);
+            require_once OMG.'/vendor/autoload.php';
+            $loader = new \Twig_Loader_Filesystem(APP.'/view');
+            $twig = new \Twig_Environment($loader, array(
+                'cache' => OMG.'/log/twig',
+                'debug'=>DEBUG
+            ));
+            $template = $twig->load('index.html');
+            $template->display($this->assign?$this->assign:'');
         }
     }
 }
