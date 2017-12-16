@@ -5,3 +5,6 @@
 
 #忽略composer文件
 vendor/
+
+#composer.lock
+composer.lock
