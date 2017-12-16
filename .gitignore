@@ -3,3 +3,5 @@
 #忽略log文件夹
 /log/
 
+#忽略composer文件
+vendor/
