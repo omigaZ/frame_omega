@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "catfan/medoo",
-            "version": "v1.4.5",
+            "version": "v1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/catfan/Medoo.git",
-                "reference": "8ee8ae1c4df0fee3822a01333eab88893e548fcc"
+                "reference": "d65fad6c087e5904803e0dfd4e7a984d0eda77ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/catfan/Medoo/8ee8ae1c4df0fee3822a01333eab88893e548fcc.zip",
-                "reference": "8ee8ae1c4df0fee3822a01333eab88893e548fcc",
+                "url": "https://files.phpcomposer.com/files/catfan/Medoo/d65fad6c087e5904803e0dfd4e7a984d0eda77ef.zip",
+                "reference": "d65fad6c087e5904803e0dfd4e7a984d0eda77ef",
                 "shasum": ""
             },
             "require": {
@@ -31,7 +31,7 @@
                 "ext-pdo_oci8": "For Oracle version 8 database",
                 "ext-pdo_pqsql": "For PostgreSQL database",
                 "ext-pdo_sqlite": "For SQLite database",
-                "ext-pdo_sqlsrv": "For MSSQL database on Windows platform"
+                "ext-pdo_sqlsrv": "For MSSQL database"
             },
             "type": "framework",
             "autoload": {
@@ -63,28 +63,24 @@
                 "sql",
                 "sqlite"
             ],
-            "time": "2017-06-24T14:43:07+00:00"
+            "time": "2017-12-01T14:31:32+00:00"
         },
         {
             "name": "codeguy/upload",
-            "version": "1.3.2",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/codeguy/Upload.git",
-                "reference": "6a9e5e1fb58d65346d0e557db2d46fb25efd3e37"
+                "url": "https://github.com/brandonsavage/Upload.git",
+                "reference": "e2bea54f98eb4fc09b5b296565eb7e54ae43642b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/codeguy/Upload/6a9e5e1fb58d65346d0e557db2d46fb25efd3e37.zip",
-                "reference": "6a9e5e1fb58d65346d0e557db2d46fb25efd3e37",
+                "url": "https://files.phpcomposer.com/files/brandonsavage/Upload/e2bea54f98eb4fc09b5b296565eb7e54ae43642b.zip",
+                "reference": "e2bea54f98eb4fc09b5b296565eb7e54ae43642b",
                 "shasum": ""
             },
             "require": {
-                "ext-fileinfo": "*",
                 "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*"
             },
             "type": "library",
             "autoload": {
@@ -100,7 +96,7 @@
                 {
                     "name": "Josh Lockhart",
                     "email": "info@joshlockhart.com",
-                    "homepage": "http://www.joshlockhart.com/"
+                    "homepage": "https://github.com/codeguy/"
                 }
             ],
             "description": "Handle file uploads with extensible validation and storage strategies",
@@ -110,20 +106,20 @@
                 "upload",
                 "validation"
             ],
-            "time": "2013-07-07T17:01:41+00:00"
+            "time": "2012-11-06T00:41:12+00:00"
         },
         {
             "name": "filp/whoops",
-            "version": "2.1.13",
+            "version": "2.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "9f640a4f129e57d3537887f840380109a4dd182b"
+                "reference": "c6081b8838686aa04f1e83ba7e91f78b7b2a23e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/filp/whoops/9f640a4f129e57d3537887f840380109a4dd182b.zip",
-                "reference": "9f640a4f129e57d3537887f840380109a4dd182b",
+                "url": "https://files.phpcomposer.com/files/filp/whoops/c6081b8838686aa04f1e83ba7e91f78b7b2a23e6.zip",
+                "reference": "c6081b8838686aa04f1e83ba7e91f78b7b2a23e6",
                 "shasum": ""
             },
             "require": {
@@ -171,7 +167,7 @@
                 "throwable",
                 "whoops"
             ],
-            "time": "2017-11-17T08:15:51+00:00"
+            "time": "2017-11-23T18:22:44+00:00"
         },
         {
             "name": "psr/log",
@@ -281,16 +277,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v3.3.13",
+            "version": "v3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "805de6bd6869073e60610df1b14ab7d969c61b01"
+                "reference": "757074cf71b952ce9e75b557538948811c2bf006"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/var-dumper/805de6bd6869073e60610df1b14ab7d969c61b01.zip",
-                "reference": "805de6bd6869073e60610df1b14ab7d969c61b01",
+                "url": "https://files.phpcomposer.com/files/symfony/var-dumper/757074cf71b952ce9e75b557538948811c2bf006.zip",
+                "reference": "757074cf71b952ce9e75b557538948811c2bf006",
                 "shasum": ""
             },
             "require": {
@@ -306,12 +302,13 @@
             },
             "suggest": {
                 "ext-iconv": "To convert non-UTF-8 strings to UTF-8 (or symfony/polyfill-iconv in case ext-iconv cannot be used).",
+                "ext-intl": "To show region name in time zone dump",
                 "ext-symfony_debug": ""
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.3-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
@@ -345,7 +342,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2017-11-07T14:16:22+00:00"
+            "time": "2017-12-11T22:06:16+00:00"
         },
         {
             "name": "twig/twig",
